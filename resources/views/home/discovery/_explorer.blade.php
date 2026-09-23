@@ -2,6 +2,8 @@
 <section class="blk" id="events" style="padding-top:26px">
   <div class="wrap wrap-full">
     <div class="sec-head">
+      <span class="bg-word" aria-hidden="true">EVENTS</span>
+      <span class="bg-word bg-word-stroke" aria-hidden="true">EVENTS</span>
       <h2 class="sec-t">Browse all events</h2>
     </div>
 
@@ -137,3 +139,38 @@
     </div>
   </div>
 </section>
+
+@push('scripts')
+<script>
+  // "EVENTS" background word: a gold outline revealed in a soft circle around the cursor
+  // (same technique as the get-the-app section headings). Desktop pointers only.
+  (() => {
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    const section = document.getElementById('events');
+    const head = section && section.querySelector('.sec-head');
+    const word = head && head.querySelector('.bg-word');
+    if (!word) return;
+
+    let targetX = 0, targetY = 0, currentX = 0, currentY = 0, raf = null;
+    const render = () => {
+      currentX += (targetX - currentX) * 0.18;
+      currentY += (targetY - currentY) * 0.18;
+      head.style.setProperty('--spot-x', currentX + 'px');
+      head.style.setProperty('--spot-y', currentY + 'px');
+      raf = Math.abs(targetX - currentX) > 0.5 || Math.abs(targetY - currentY) > 0.5
+        ? requestAnimationFrame(render)
+        : null;
+    };
+
+    head.addEventListener('mousemove', e => {
+      const rect = word.getBoundingClientRect();
+      targetX = e.clientX - rect.left;
+      targetY = e.clientY - rect.top;
+      head.style.setProperty('--spot-opacity', '1');
+      if (!raf) raf = requestAnimationFrame(render);
+    }, { passive: true });
+
+    head.addEventListener('mouseleave', () => head.style.setProperty('--spot-opacity', '0'));
+  })();
+</script>
+@endpush

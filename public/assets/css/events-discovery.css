@@ -590,17 +590,17 @@ a.ecard:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .spk .sbody span{font-size:12px;color:var(--gold);font-weight:700}
 .spk .sbody p{font-size:12px;color:var(--t2);margin-top:5px}
 
-/* ===== APP BAND (slim) ===== */
-.appband{position:relative;border-radius:20px;overflow:hidden;background:linear-gradient(115deg,#1A2440 0%,#2D3C69 58%,#37477A 100%);color:#fff;padding:34px 40px;display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;box-shadow:0 22px 50px rgba(26,36,64,.32)}
-.appband::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(500px 320px at 96% 0%,rgba(206,137,36,.38),transparent 60%)}
-.appband-copy{position:relative;z-index:2;max-width:560px}
-.appband h2{font-size:clamp(22px,2.7vw,30px);font-weight:800;margin:8px 0 8px;line-height:1.1}
+/* ===== APP BAND ===== */
+.appband{position:relative;border-radius:24px;overflow:hidden;background:linear-gradient(115deg,#1A2440 0%,#253361 55%,#2F3F72 100%);color:#fff;padding:0 64px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:stretch;box-shadow:0 30px 60px -24px rgba(26,36,64,.45),inset 0 1px 0 rgba(255,255,255,.08)}
+.appband::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px 340px at 74% 88%,rgba(206,137,36,.22),transparent 70%)}
+.appband-copy{position:relative;z-index:2;max-width:520px;align-self:center;padding:56px 0}
+.appband h2{font-size:clamp(28px,3.1vw,40px);font-weight:800;margin:12px 0 14px;line-height:1.08;letter-spacing:-.015em}
 .appband h2 .hl{color:var(--gold-l)}
-.appband p{color:rgba(255,255,255,.82);font-size:14.5px;max-width:480px}
-.appfeats{display:flex;flex-wrap:wrap;gap:8px 20px;margin:14px 0 18px}
-.appfeats div{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:rgba(255,255,255,.9)}
-.appfeats .fk{width:20px;height:20px;border-radius:6px;background:rgba(206,137,36,.18);border:1px solid rgba(228,166,63,.4);display:flex;align-items:center;justify-content:center;color:var(--gold-l);flex:none}
-.appfeats .fk svg{width:12px;height:12px}
+.appband p{color:rgba(255,255,255,.78);font-size:16px;line-height:1.65;max-width:470px}
+.appfeats{display:flex;flex-direction:column;gap:10px;margin:24px 0 30px}
+.appfeats div{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:600;color:rgba(255,255,255,.92)}
+.appfeats .fk{width:18px;height:18px;display:flex;align-items:center;justify-content:center;color:var(--gold-l);background:none;border:0;border-radius:0;flex:none}
+.appfeats .fk svg{width:16px;height:16px}
 .storebadges{display:flex;gap:12px;flex-wrap:wrap}
 .store{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--navy);border-radius:12px;padding:9px 16px;transition:.2s;box-shadow:0 10px 24px rgba(0,0,0,.2)}
 .store:hover{transform:translateY(-2px)}
@@ -608,8 +608,8 @@ a.ecard:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .store .st{line-height:1.1}
 .store .st small{font-size:9.5px;font-weight:600;color:var(--t2);display:block}
 .store .st b{font-size:15px;font-weight:800;font-family:'Source Sans 3',sans-serif}
-.appphones{position:relative;z-index:2;width:300px;height:360px}
-.appphones .glow{position:absolute;inset:30px 40px;border-radius:50%;background:radial-gradient(circle,rgba(206,137,36,.45),transparent 66%);filter:blur(54px);z-index:0}
+.appphones{position:relative;z-index:2;width:340px;height:380px;align-self:end;justify-self:center;margin-top:48px}
+.appphones .glow{position:absolute;inset:40px 30px 0;border-radius:50%;background:radial-gradient(circle,rgba(206,137,36,.4),transparent 66%);filter:blur(60px);z-index:0}
 .appphones .phone{position:absolute;width:186px;border-radius:34px;background:linear-gradient(155deg,#3a4056 0%,#12172a 55%,#080b16 100%);padding:7px;z-index:1;box-shadow:0 44px 80px rgba(0,0,0,.55),0 8px 22px rgba(0,0,0,.4),inset 0 0 0 1.5px rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.05)}
 .appphones .phone .scr{position:relative;border-radius:27px;overflow:hidden;display:block;background:#0b1020}
 .appphones .phone img{width:100%;display:block}
@@ -618,8 +618,8 @@ a.ecard:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .appphones .phone .gloss{position:absolute;inset:0;z-index:4;pointer-events:none;background:linear-gradient(122deg,rgba(255,255,255,.24) 0%,rgba(255,255,255,.05) 20%,transparent 42%,transparent 74%,rgba(255,255,255,.09) 100%)}
 .appphones .phone::after{content:"";position:absolute;right:-2px;top:82px;width:3px;height:42px;border-radius:2px;background:rgba(255,255,255,.16)}
 .appphones .phone::before{content:"";position:absolute;left:-2px;top:70px;width:3px;height:26px;border-radius:2px;background:rgba(255,255,255,.12)}
-.appphones .p-back{right:6px;top:8px;transform:rotate(7deg);width:172px;filter:brightness(.9)}
-.appphones .p-front{left:2px;top:44px;transform:rotate(-4deg);z-index:2}
+.appphones .p-back{right:0;top:0;transform:rotate(7deg);width:210px;filter:brightness(.88)}
+.appphones .p-front{left:10px;top:36px;transform:rotate(-4deg);width:210px;z-index:2}
 .appchip{position:absolute;z-index:5;left:-16px;bottom:40px;display:flex;align-items:center;gap:10px;background:#fff;border-radius:13px;padding:9px 13px 9px 10px;box-shadow:0 16px 34px rgba(0,0,0,.32);border:2px solid var(--grn)}
 .appchip .ac-ic{width:32px;height:32px;border-radius:9px;background:rgba(30,158,106,.14);color:var(--grn);display:flex;align-items:center;justify-content:center;flex:none}
 .appchip .ac-ic svg{width:17px;height:17px}
@@ -648,8 +648,10 @@ a.ecard:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
   .hsearch .fld+.fld{border-left:none}
   .egrid{grid-template-columns:repeat(2,1fr)}
   .statgrid{grid-template-columns:repeat(2,1fr)}
-  .appband{grid-template-columns:1fr;padding:30px 24px}
-  .appphones{margin:14px auto 0}
+  .appband{grid-template-columns:1fr;gap:0;padding:0 28px}
+  .appband-copy{padding:40px 0 0;max-width:none}
+  .appphones{width:300px;height:330px;margin-top:32px}
+  .appphones .p-front{width:172px}.appphones .p-back{width:156px}
   .news{grid-template-columns:1fr}
   .fgrid{grid-template-columns:1fr 1fr}
 }
@@ -672,3 +674,216 @@ a.ecard:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
   .loc-pop{width:210px}
 }
 
+
+/* Transparent nav (nav.nav-overlay) sits over the top 72px of the hero slider:
+   the slider grows by 72px so its imagery runs up behind the logo, and the
+   slide content / arrows are pushed down by the same amount. */
+#dxHero .heroslider{height:412px}
+#dxHero .slide .sin{padding-top:72px}
+#dxHero .hs-arrow{top:calc(50% + 36px)}
+@media(max-width:900px){#dxHero .heroslider{height:372px}}
+@media(max-width:600px){#dxHero .heroslider{height:342px}}
+
+/* ===== Explorer + calendar refinement (styling only — markup/JS untouched) =====
+   Quieter surfaces, hairline grid, light weekday header, tinted event chips. */
+#events .sec-t{font-size:clamp(28px,3.2vw,40px);line-height:1.1;letter-spacing:-.015em;color: #2d3b68;margin:0 0 22px}
+
+/* toolbar: search and view switch share the first row */
+.explorer{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:14px;align-items:center;padding:22px;border-radius:22px;border-color:#E9EBF2;box-shadow:0 1px 2px rgba(28,38,74,.04),0 18px 40px -28px rgba(28,38,74,.25)}
+.explorer>*:not(.ex-search):not(.ex-bar){grid-column:1/-1}
+.ex-search{margin:0;height:48px;padding:0 16px;border-radius:14px;border-color:transparent;background:#F3F4F8}
+.ex-search:focus-within{background:#fff;border-color:rgba(206,137,36,.55);box-shadow:0 0 0 4px rgba(206,137,36,.1)}
+.ex-search svg{width:18px;height:18px;color:var(--t3)}
+.ex-search:focus-within svg{color:var(--gold)}
+.ex-search input{font-weight:500}
+
+.viewsw{background:#F3F4F8;border-color:transparent;padding:4px;gap:2px;height:48px;align-items:center}
+.viewsw button{height:40px;padding:0 16px;font-weight:700;color:var(--t2)}
+.viewsw button.active{background:#fff;color:var(--navy);box-shadow:0 1px 2px rgba(28,38,74,.08),0 4px 12px -4px rgba(28,38,74,.18)}
+.viewsw button:focus-visible,.cal2-modes button:focus-visible,.fchip:focus-visible,.cal-nav button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+/* filter row */
+.filters{margin-top:18px;padding-top:18px;border-top-color:#EEF0F5;gap:8px}
+.flabel{margin-right:4px;letter-spacing:.12em;font-size:10.5px}
+.fchip{padding:7px 14px;font-weight:600;font-size:13px;border-color:#E6E8EF;color:var(--t1);background:#fff}
+.fchip:hover{border-color:var(--navy);color:var(--navy)}
+.fchip.active .dotc{background: #E6E8EF !important;}
+.fchip.active{background:var(--navy);border-color:var(--navy);color:#fff}
+.result-count{font-weight:600;color:var(--t3)}
+.result-count b{color:var(--t1)}
+
+button#clearFilters {
+  padding: 4px 18px !important;
+}
+
+button#clearFilters:hover {
+  box-shadow: 0 6px 16px rgba(28, 38, 74, 0) !important;
+}
+
+/* calendar header */
+.cal2-head{margin:6px 0 18px}
+.cal2-title{font-size:clamp(22px,2.2vw,28px);letter-spacing:-.01em;color:var(--t1)}
+.cal2-ctrls{gap:8px}
+.cal2-modes{background:#F3F4F8;border-color:transparent;padding:4px;gap:2px}
+.cal2-modes button{font-weight:700;padding:7px 16px}
+.cal2-modes button.active{background:#fff;color:var(--navy);box-shadow:0 1px 2px rgba(28,38,74,.08),0 4px 12px -4px rgba(28,38,74,.18)}
+#events .cal2-ctrls .today,#events #calToday{background:#fff;color:var(--navy);border:1px solid #E6E8EF;box-shadow:none;padding:8px 18px}
+#events .cal2-ctrls .today:hover,#events #calToday:hover{background:#fff;color:var(--navy);border-color:var(--navy);box-shadow:none;transform:none}
+.cal-nav{gap:4px}
+.cal-nav button{width:36px;height:36px;border-radius:50%;border-color:#E6E8EF}
+.cal-nav button:hover{background:var(--navy);border-color:var(--navy);color:#fff}
+
+/* month grid */
+.c2cal,.c2wk{border-color:#E9EBF2;border-radius:14px}
+.c2dow,.wkhead{background:#fff;border-bottom:1px solid #E9EBF2}
+.c2dow span,.wkhead span{color:var(--t3);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:12px 4px}
+.c2dow span.today,.wkhead span.today{background:transparent;color:var(--gold)}
+.c2{min-height:108px;padding:10px;gap:4px;border-color:#EEF0F5;transition:background-color .15s ease}
+.c2.other{background:#FAFBFD}
+.c2.other .dn{color:#C3C8D8}
+.c2 .dn{font-size:13px;font-weight:600;color:var(--t2);min-width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;margin:-4px 0 2px -4px;border-radius:50%}
+.c2.today{background:#FFFBF4}
+.c2.today .dn{background:var(--navy);color:#fff;min-width:26px;height:26px;padding:0;border-radius:50%;font-size:12.5px;font-weight:700}
+.c2.has:hover{background:#F7F8FB}
+.c2.today.has:hover{background:#FFF6E6}
+
+/* event chips: tinted fill + colour edge, dark text so every category colour stays legible */
+.c2evt{background:var(--cc);background:color-mix(in srgb,var(--cc) 13%,#fff);color:var(--t1);border-left:3px solid var(--cc);border-radius:6px;padding:4px 8px;font-size:11.5px;font-weight:700;line-height:1.25}
+.c2more{font-weight:700;color:var(--t3);padding-left:2px}
+
+/* week view */
+.wknums{border-bottom-color:#EEF0F5}
+.wknum{border-left-color:#EEF0F5;font-weight:600;color:var(--t2);padding:10px}
+.wknum.today span{background:var(--navy);color:#fff;border-radius:99px;padding:3px 9px}
+.wkcol{border-left-color:#EEF0F5;padding:10px 8px;min-width:0}
+.wkbar{background:var(--cc);background:color-mix(in srgb,var(--cc) 13%,#fff);color:var(--t1);border-left:3px solid var(--cc);border-radius:8px;padding:7px 9px}
+.wkbar:hover{filter:none;background:color-mix(in srgb,var(--cc) 20%,#fff)}
+.wkbar .wt{color:var(--t2)}
+
+/* day view + legend */
+.c2day-h{background:#F3F4F8;border-color:transparent;border-radius:12px;color:var(--t2)}
+.drow{border-color:#EEF0F5;border-radius:14px}
+.drow:hover{border-color:#E1E4EC;box-shadow:0 10px 24px -16px rgba(28,38,74,.3);transform:none}
+.cal2-legend{border-top-color:#EEF0F5;margin-top:16px;padding-top:14px;gap:8px 18px;color:var(--t2)}
+.cal2-legend i{width:8px;height:8px;border-radius:50%}
+
+@media (max-width:760px){
+  .explorer{grid-template-columns:minmax(0,1fr);row-gap:12px;padding:16px;border-radius:18px}
+  .ex-bar{justify-content:flex-start}
+}
+@media (max-width:600px){
+  .c2{min-height:56px;padding:6px}
+  .c2 .dn{font-size:11.5px;min-width:22px;height:22px;margin:0}
+  .c2.today .dn{min-width:22px;height:22px;font-size:11px}
+  .c2evt{display:none}
+  /* weekday initials (S M T W T F S) — full names do not fit 7 narrow columns */
+  .c2dow span{font-size:0;letter-spacing:0;padding:10px 0}
+  .c2dow span::first-letter{font-size:11px}
+  .c2.has::after{left:50%;bottom:7px;transform:translateX(-50%);background:var(--gold)}
+  .cal2-head{margin-bottom:14px}
+}
+@media (prefers-reduced-motion:reduce){.c2{transition:none}}
+
+/* "EVENTS" background word behind the Browse heading — light-theme take on the
+   get-the-app section headings: a pale word, plus a gold-outlined copy revealed
+   in a soft circle around the cursor (--spot-* written by the inline script). */
+#events .sec-head{position:relative;isolation:isolate;padding-top:clamp(40px,6vw,84px);--spot-x:50%;--spot-y:50%;--spot-opacity:0}
+#events .sec-head .bg-word{position:absolute;left:-.04em;bottom:.12em;z-index:-1;font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:clamp(44px,9vw,120px);line-height:.9;letter-spacing:-.02em;color:#E7EAF3;white-space:nowrap;pointer-events:none;user-select:none}
+@media (hover:hover) and (pointer:fine){
+  #events .sec-head .bg-word-stroke{color:transparent;-webkit-text-fill-color:#E7EAF3;-webkit-text-stroke:1.5px rgba(206,137,36,.85);paint-order:stroke fill;opacity:var(--spot-opacity);-webkit-mask-image:radial-gradient(circle 130px at var(--spot-x) var(--spot-y),#000 0%,rgba(0,0,0,.4) 55%,transparent 100%);mask-image:radial-gradient(circle 130px at var(--spot-x) var(--spot-y),#000 0%,rgba(0,0,0,.4) 55%,transparent 100%);transition:opacity .45s ease;will-change:opacity}
+}
+@media (hover:none),(pointer:coarse){#events .sec-head .bg-word-stroke{display:none}}
+@media (prefers-reduced-motion:reduce){#events .sec-head .bg-word-stroke{transition:none}}
+
+/* App band: concentric rings behind the phones (same motif as the get-the-app CTA,
+   drawn in white for the dark band) + a phone layout that fits small screens. */
+.appphones::before{content:"";position:absolute;left:50%;top:58%;width:620px;aspect-ratio:1;translate:-50% -50%;z-index:0;border-radius:50%;pointer-events:none;
+  background:repeating-radial-gradient(circle,transparent 0 52px,rgba(255,255,255,.11) 53px 54px);
+  -webkit-mask-image:radial-gradient(closest-side,#000 45%,transparent);mask-image:radial-gradient(closest-side,#000 45%,transparent)}
+@media(max-width:600px){
+  .appband{padding:0 22px}
+  .storebadges{gap:10px}
+  .store{padding:8px 12px;gap:8px}
+  .appphones{width:260px;height:300px;margin:28px auto 0}
+  .appphones::before{width:460px;top:60%}
+  .appphones .p-front{width:150px;left:4px;top:34px}
+  .appphones .p-back{width:138px;right:4px;top:0}
+  .appphones .glow{inset:40px 10px 0}
+}
+
+/* App band: hovering the band fans the phones out a little further — the front
+   phone leans left and lifts, the back phone leans right and drifts outward. */
+@media (hover:hover) and (pointer:fine){
+  .appphones .phone{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .appband:hover .appphones .p-front{transform:rotate(-8deg) translate(-6px,-12px)}
+  .appband:hover .appphones .p-back{transform:rotate(12deg) translate(10px,-4px)}
+}
+@media (prefers-reduced-motion:reduce){
+  .appphones .phone{transition:none}
+  .appband:hover .appphones .p-front{transform:rotate(-4deg)}
+  .appband:hover .appphones .p-back{transform:rotate(7deg)}
+}
+
+/* ===== Calendar polish (visual only — no sizes, spacing or positions change) ===== */
+.c2cal,.c2wk{background:#fff;box-shadow:0 1px 2px rgba(28,38,74,.04),0 14px 34px -22px rgba(28,38,74,.22)}
+.c2dow,.wkhead{background:#FAFBFD}
+.c2dow span.today,.wkhead span.today{box-shadow:inset 0 -2px 0 var(--gold)}
+.c2 .dn,.wknum{font-variant-numeric:tabular-nums}
+
+/* weekends: a barely-there tint so the week reads at a glance */
+.c2grid>.c2:not(.other):not(.today):is(:nth-child(7n+1),:nth-child(7n)){background:#FCFCFE}
+
+/* days outside the month recede behind a faint hatch */
+.c2.other{background:repeating-linear-gradient(135deg,#FAFBFD 0 7px,#F3F5F9 7px 8px)}
+
+/* today: gold rule along the top of the cell over a warm tint */
+.c2.today{background:linear-gradient(180deg,#FFF6E7 0%,#FFFBF4 60%);box-shadow:inset 0 2px 0 var(--gold)}
+.c2.today .dn{box-shadow:0 4px 10px -4px rgba(45,60,105,.55)}
+
+/* hover: date number gets a soft disc; days with events get a gold inset outline */
+.c2 .dn{transition:background-color .15s ease,color .15s ease}
+.c2:not(.today):not(.other):hover .dn{background:#EEF0F6;color:var(--t1)}
+.c2.has:hover{background:#FFFDF8;box-shadow:inset 0 0 0 1px rgba(206,137,36,.4)}
+.c2.today.has:hover{box-shadow:inset 0 2px 0 var(--gold),inset 0 0 0 1px rgba(206,137,36,.4)}
+
+/* event chips: softer edge, gentle depth, deepen on hover */
+.c2evt{box-shadow:0 1px 1px rgba(28,38,74,.05);transition:background-color .15s ease,box-shadow .15s ease}
+.c2.has:hover .c2evt{background:color-mix(in srgb,var(--cc) 22%,#fff);box-shadow:0 2px 6px -2px rgba(28,38,74,.18)}
+.c2more{color:var(--gold)}
+
+/* week view */
+.wknum.today span{box-shadow:0 4px 10px -4px rgba(45,60,105,.55)}
+.wkbar{box-shadow:0 1px 1px rgba(28,38,74,.05);transition:background-color .15s ease,box-shadow .15s ease,transform .15s ease}
+.wkbar:hover{box-shadow:0 6px 14px -8px rgba(28,38,74,.35);transform:translateY(-1px)}
+
+/* day view */
+.drow{transition:border-color .15s ease,box-shadow .15s ease}
+.drow:hover{border-color:rgba(206,137,36,.45)}
+.drow .dtime{font-variant-numeric:tabular-nums}
+
+/* controls */
+.cal-nav button{transition:background-color .15s ease,border-color .15s ease,color .15s ease}
+.cal2-modes button:not(.active):hover{color:var(--t1)}
+
+@media (prefers-reduced-motion:reduce){
+  .c2 .dn,.c2evt,.wkbar,.drow,.cal-nav button{transition:none}
+  .wkbar:hover{transform:none}
+}
+
+/* ===== Today: a navy tile set inside the cell (cell size/position unchanged) ===== */
+.c2.today{position:relative;background:#fff;box-shadow:none}
+.c2.today::before{content:"";position:absolute;inset:5px;z-index:0;border-radius:12px;pointer-events:none;
+  background:var(--navy);transition:filter .2s ease}
+.c2.today>*{position:relative;z-index:1}
+.c2.today .dn{background:transparent;color:#fff;font-weight:700;box-shadow:none}
+.c2.today::after{content:"Today";position:absolute;z-index:1;top:14px;right:14px;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-l);pointer-events:none}
+.c2.today .c2more{color:var(--gold-l)}
+.c2.today.has:hover{background:#fff;box-shadow:none}
+.c2.today:hover::before{filter:brightness(1.12)}
+@media(max-width:600px){
+  .c2.today::before{inset:3px;border-radius:9px}
+  .c2.today .dn{align-self:center}
+  .c2.today:not(.has)::after{display:none}
+  .c2.today.has::after{content:"";top:auto;right:auto;left:50%;bottom:7px;transform:translateX(-50%);width:5px;height:5px;border-radius:50%;background:var(--gold-l);font-size:0;letter-spacing:0}
+}
+@media (prefers-reduced-motion:reduce){.c2.today::before{transition:none}}
