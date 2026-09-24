@@ -282,7 +282,7 @@
                 </div>
 
                 <!-- ============ EVERYTHING YOUR COMMUNITY NEEDS ============ -->
-                <div class="needs-card" data-reveal-group>
+                {{-- <div class="needs-card" data-reveal-group>
                     <div class="needs-copy" data-reveal style="--d: 0">
                         <h2 id="needs-title">Everything your community needs</h2>
                         <p>Discover what's happening across chapters — and jump into the conversations and events
@@ -323,7 +323,7 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> --}}
             </div>
         </section>
 
