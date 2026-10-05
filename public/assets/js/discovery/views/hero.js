@@ -22,11 +22,43 @@ export function initHero(store) {
   const slidesHost = document.getElementById('heroSlides');
   const dotsHost = document.getElementById('heroDots');
   const heroRoot = document.getElementById('dxHero');
+  const slider = heroRoot ? heroRoot.querySelector('.heroslider') : null;
   if (!slidesHost || !dotsHost) return;
+
+  const next = document.getElementById('hsNext');
+  const prev = document.getElementById('hsPrev');
+
+  function setControlsHidden(hidden) {
+    [next, prev, dotsHost].forEach((el) => {
+      if (!el) return;
+      el.classList.toggle('is-hidden', hidden);
+      if (hidden) el.setAttribute('hidden', '');
+      else el.removeAttribute('hidden');
+    });
+    if (slider) slider.classList.toggle('is-empty', hidden);
+  }
+
   if (!featured.length) {
-    if (heroRoot) heroRoot.style.display = 'none';
+    if (heroRoot) heroRoot.style.display = '';
+    if (!document.getElementById('heroEmpty')) {
+      slidesHost.innerHTML =
+        '<div class="slide slide-empty active" id="heroEmpty">' +
+          '<div class="sbg" aria-hidden="true"></div>' +
+          '<div class="sov" aria-hidden="true"></div>' +
+          '<div class="sin">' +
+            '<span class="seye"><span class="sdot"></span>Mixers &middot; Workshops &middot; Conferences</span>' +
+            '<h2>Where the chapter meets</h2>' +
+            '<p class="slead">Dinner mixers, networking nights and workshops across every AMCOB chapter.</p>' +
+            '<div class="scta"><a class="btn btn-gold" href="/get-the-app">Get the app</a><a class="btn btn-glass" href="#events">See the calendar</a></div>' +
+          '</div>' +
+        '</div>';
+    }
+    dotsHost.innerHTML = '';
+    setControlsHidden(true);
     return;
   }
+
+  setControlsHidden(false);
 
   function slideHTML(e) {
     const d = parseDate(e.date);
@@ -58,8 +90,6 @@ export function initHero(store) {
   let heroTimer;
   const single = featured.length < 2;
 
-  const next = document.getElementById('hsNext');
-  const prev = document.getElementById('hsPrev');
   if (single) {
     if (next) next.classList.add('is-hidden');
     if (prev) prev.classList.add('is-hidden');
